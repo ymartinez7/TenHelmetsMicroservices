@@ -1,8 +1,8 @@
-﻿namespace _10Helmets.API.Core.Services
+﻿namespace TenHelmets.MS.Core.Services
 {
-    using _10Helmets.API.Core.Entities;
-    using _10Helmets.API.Core.Interfaces.Repositories;
-    using _10Helmets.API.Core.Interfaces.Services;
+    using TenHelmets.MS.Core.Entities;
+    using TenHelmets.MS.Core.Interfaces.Repositories;
+    using TenHelmets.MS.Core.Interfaces.Services;
 
     /// <summary>
     /// 

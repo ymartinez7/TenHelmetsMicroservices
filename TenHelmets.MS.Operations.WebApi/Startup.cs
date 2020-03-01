@@ -1,12 +1,12 @@
-﻿namespace _10Helmets.API.UI.Operations.WebApi
+﻿namespace TenHelmets.MS.Operations.WebApi
 {
-    using _10Helmets.API.Core.Interfaces.Repositories;
-    using _10Helmets.API.Core.Interfaces.Services;
-    using _10Helmets.API.Core.Services;
-    using _10Helmets.API.Infrastructure.Data.Context;
-    using _10Helmets.API.Infrastructure.Data.Repositories;
-    using _10Helmets.API.Infrastructure.Identity;
-    using _10Helmets.API.UI.Operations.WebApi.Mapper;
+    using TenHelmets.MS.Core.Interfaces.Repositories;
+    using TenHelmets.MS.Core.Interfaces.Services;
+    using TenHelmets.MS.Core.Services;
+    using TenHelmets.MS.Infrastructure.Data.Context;
+    using TenHelmets.MS.Infrastructure.Data.Repositories;
+    using TenHelmets.MS.Infrastructure.Identity;
+    using TenHelmets.MS.Operations.WebApi.Mapper;
     using AutoMapper;
     using Microsoft.AspNetCore.Authentication.JwtBearer;
     using Microsoft.AspNetCore.Builder;
@@ -99,9 +99,9 @@
                     Title = "10Helmets APIs RESTful Operations"
                 });
 
-                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                config.IncludeXmlComments(xmlPath);
+                //var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                //config.IncludeXmlComments(xmlPath);
             });
         }
 

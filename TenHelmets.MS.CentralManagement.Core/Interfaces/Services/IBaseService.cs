@@ -1,4 +1,4 @@
-﻿namespace _10Helmets.API.Core.Interfaces.Services
+﻿namespace TenHelmets.MS.Core.Interfaces.Services
 {
     using System;
     using System.Collections.Generic;

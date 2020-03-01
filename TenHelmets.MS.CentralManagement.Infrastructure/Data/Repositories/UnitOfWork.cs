@@ -1,6 +1,6 @@
-﻿namespace _10Helmets.API.Infrastructure.Data.Repositories
+﻿namespace TenHelmets.MS.Infrastructure.Data.Repositories
 {
-    using _10Helmets.API.Core.Interfaces.Repositories;
+    using TenHelmets.MS.Core.Interfaces.Repositories;
     using Microsoft.EntityFrameworkCore;
 
     /// <summary>

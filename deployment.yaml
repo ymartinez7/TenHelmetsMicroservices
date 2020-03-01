@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: ms-administration-deployment
+ labels:
+  app: ms-administration
+spec:
+ replicas: 10
+ selector:
+  matchLabels:
+   app: ms-administration
+ template:
+  metadata:
+   labels:
+    app: ms-administration
+  spec:
+   containers:
+   - name: ms-administration
+     image: ms-administration:v2
+     ports:
+     - containerPort: 8018

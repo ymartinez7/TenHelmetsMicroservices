@@ -1,4 +1,4 @@
-﻿namespace _10Helmets.API.Infrastructure.Data.Enums
+﻿namespace TenHelmets.MS.Infrastructure.Data.Enums
 {
     /// <summary>
     /// 

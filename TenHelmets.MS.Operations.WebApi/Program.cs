@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace _10Helmets.API.UI.Operations.WebApi
+namespace TenHelmets.MS.Operations.WebApi
 {
     public class Program
     {

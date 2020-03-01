@@ -1,4 +1,4 @@
-﻿namespace _10Helmets.API.Core.DTOs
+﻿namespace TenHelmets.MS.Core.DTOs
 {
     /// <summary>
     /// 

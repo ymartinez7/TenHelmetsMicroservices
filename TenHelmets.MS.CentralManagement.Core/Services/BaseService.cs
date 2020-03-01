@@ -1,7 +1,7 @@
-﻿namespace _10Helmets.API.Core.Services
+﻿namespace TenHelmets.MS.Core.Services
 {
-    using _10Helmets.API.Core.Interfaces.Repositories;
-    using _10Helmets.API.Core.Interfaces.Services;
+    using TenHelmets.MS.Core.Interfaces.Repositories;
+    using TenHelmets.MS.Core.Interfaces.Services;
     using System;
     using System.Collections.Generic;
     using System.Linq.Expressions;

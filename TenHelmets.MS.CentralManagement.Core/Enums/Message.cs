@@ -1,4 +1,4 @@
-﻿namespace _10Helmets.API.Core.Enums
+﻿namespace TenHelmets.MS.Core.Enums
 {
     /// <summary>
     /// 

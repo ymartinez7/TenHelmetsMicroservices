@@ -1,4 +1,4 @@
-﻿namespace _10Helmets.API.Infrastructure.Identity
+﻿namespace TenHelmets.MS.Infrastructure.Identity
 {
     using Microsoft.AspNetCore.Identity;
     using System;

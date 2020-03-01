@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <RootNamespace>_10Helmets.API.Infrastructure</RootNamespace>
+    <RootNamespace>TenHelmets.MS.Infrastructure</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,12 +27,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\10Helmets.API.Core\10Helmets.API.Core.csproj" />
+    <Folder Include="Logging\" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Logging\" />
-    <Folder Include="Services\" />
+    <ProjectReference Include="..\TenHelmets.MS.CentralManagement.Core\TenHelmets.MS.CentralManagement.Core.csproj" />
   </ItemGroup>
 
 </Project>

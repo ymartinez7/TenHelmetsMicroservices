@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace _10Helmets.API.Infrastructure.Data.Migrations
+namespace TenHelmets.MS.Infrastructure.Data.Migrations
 {
     public partial class Initial : Migration
     {

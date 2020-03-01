@@ -1,4 +1,4 @@
-﻿namespace _10Helmets.API.Infrastructure.Data.Setup
+﻿namespace TenHelmets.MS.Infrastructure.Data.Setup
 {
     /// <summary>
     /// 

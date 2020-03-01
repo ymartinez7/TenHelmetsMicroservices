@@ -1,6 +1,6 @@
-﻿namespace _10Helmets.API.UI.Operations.WebApi.Controllers
+﻿namespace TenHelmets.MS
 {
-    using _10Helmets.API.Core.Enums;
+    using TenHelmets.MS.Core.Enums;
     using AutoMapper;
     using Microsoft.AspNetCore.Authentication.JwtBearer;
     using Microsoft.AspNetCore.Authorization;

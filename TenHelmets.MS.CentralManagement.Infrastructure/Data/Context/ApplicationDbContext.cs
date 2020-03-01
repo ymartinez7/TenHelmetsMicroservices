@@ -1,8 +1,8 @@
-﻿namespace _10Helmets.API.Infrastructure.Data.Context
+﻿namespace TenHelmets.MS.Infrastructure.Data.Context
 {
-    using _10Helmets.API.Core.Entities;
-    using _10Helmets.API.Infrastructure.Data.Config;
-    using _10Helmets.API.Infrastructure.Identity;
+    using TenHelmets.MS.Core.Entities;
+    using TenHelmets.MS.Infrastructure.Data.Config;
+    using TenHelmets.MS.Infrastructure.Identity;
     using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore;
 

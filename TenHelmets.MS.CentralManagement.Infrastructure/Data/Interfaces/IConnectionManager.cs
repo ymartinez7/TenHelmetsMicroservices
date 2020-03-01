@@ -1,6 +1,6 @@
-﻿namespace _10Helmets.API.Infrastructure.Data.Interfaces
+﻿namespace TenHelmets.MS.Infrastructure.Data.Interfaces
 {
-    using _10Helmets.API.Infrastructure.Data.Enums;
+    using TenHelmets.MS.Infrastructure.Data.Enums;
     using Microsoft.EntityFrameworkCore;
 
     /// <summary>

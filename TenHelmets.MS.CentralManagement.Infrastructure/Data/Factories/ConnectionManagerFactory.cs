@@ -1,7 +1,7 @@
-﻿namespace _10Helmets.API.Infrastructure.Data.Factories
+﻿namespace TenHelmets.MS.Infrastructure.Data.Factories
 {
-    using _10Helmets.API.Infrastructure.Data.Enums;
-    using _10Helmets.API.Infrastructure.Data.Interfaces;
+    using TenHelmets.MS.Infrastructure.Data.Enums;
+    using TenHelmets.MS.Infrastructure.Data.Interfaces;
     using Microsoft.EntityFrameworkCore;
 
     /// <summary>

@@ -1,4 +1,4 @@
-﻿namespace _10Helmets.API.UI.CentralManagement.WebApi.Mapper
+﻿namespace TenHelmets.MS.UI.CentralManagement.WebApi.Mapper
 {
     using AutoMapper;
 

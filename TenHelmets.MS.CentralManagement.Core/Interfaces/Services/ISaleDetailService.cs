@@ -1,6 +1,6 @@
-﻿namespace _10Helmets.API.Core.Interfaces.Services
+﻿namespace TenHelmets.MS.Core.Interfaces.Services
 {
-    using _10Helmets.API.Core.Entities;
+    using TenHelmets.MS.Core.Entities;
 
     /// <summary>
     /// 

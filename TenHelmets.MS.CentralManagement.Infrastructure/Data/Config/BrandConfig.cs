@@ -1,6 +1,6 @@
-﻿namespace _10Helmets.API.Infrastructure.Data.Config
+﻿namespace TenHelmets.MS.Infrastructure.Data.Config
 {
-    using _10Helmets.API.Core.Entities;
+    using TenHelmets.MS.Core.Entities;
     using Microsoft.EntityFrameworkCore;
 
     /// <summary>

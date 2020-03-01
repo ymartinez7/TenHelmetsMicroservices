@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
-    <RootNamespace>_10Helmets.API.UI.CentralManagement.WebApi</RootNamespace>
+    <RootNamespace>TenHelmets.MS.CentralManagement.WebApi</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -16,6 +16,11 @@
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TenHelmets.MS.CentralManagement.Core\TenHelmets.MS.CentralManagement.Core.csproj" />
+    <ProjectReference Include="..\TenHelmets.MS.CentralManagement.Infrastructure\TenHelmets.MS.CentralManagement.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

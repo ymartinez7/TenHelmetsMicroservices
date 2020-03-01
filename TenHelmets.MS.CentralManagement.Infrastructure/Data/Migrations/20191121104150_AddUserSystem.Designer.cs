@@ -5,9 +5,9 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using _10Helmets.API.Infrastructure.Data.Context;
+using TenHelmets.MS.Infrastructure.Data.Context;
 
-namespace _10Helmets.API.Infrastructure.Data.Migrations
+namespace TenHelmets.MS.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20191121104150_AddUserSystem")]
@@ -131,7 +131,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.ActionType", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.ActionType", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -151,7 +151,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("ActionTypes");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Activity", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Activity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -225,7 +225,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Activities");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.ActivityType", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.ActivityType", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -248,7 +248,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("ActivityTypes");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Alert", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Alert", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -297,7 +297,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Alerts");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.AlertType", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.AlertType", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -320,7 +320,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("AlertTypes");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Bill", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Bill", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -361,7 +361,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Bills");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Brand", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Brand", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -381,7 +381,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Brands");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Cal", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Cal", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -424,7 +424,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Cals");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Customer", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Customer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -468,7 +468,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Customers");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.DocumentType", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.DocumentType", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -491,7 +491,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("DocumentTypes");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Employee", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Employee", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -542,7 +542,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Employees");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Espense", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Espense", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -602,7 +602,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Espenses");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.EspenseType", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.EspenseType", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -625,7 +625,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("EspenseTypes");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.EventLog", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.EventLog", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -654,7 +654,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("EventLogs");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.EventLogType", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.EventLogType", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -674,7 +674,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("EventLogTypes");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.File", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.File", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -708,7 +708,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Files");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Inspection", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Inspection", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -743,7 +743,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Inspections");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.InspectionType", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.InspectionType", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -766,7 +766,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("InspectionTypes");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Model", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Model", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -800,7 +800,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Models");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Note", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Note", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -829,7 +829,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Notes");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Organization", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Organization", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -854,7 +854,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Organizations");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.PaymentType", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.PaymentType", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -874,7 +874,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("PaymentTypes");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Priority", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Priority", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -906,7 +906,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Priotities");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Project", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Project", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -947,7 +947,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Projects");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.ProjectBudget", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.ProjectBudget", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -996,7 +996,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("ProjectBudgets");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Provider", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Provider", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1036,7 +1036,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Providers");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Purchase", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Purchase", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1085,7 +1085,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Purchases");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.PurchaseDetail", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.PurchaseDetail", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1126,7 +1126,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("PurchaseDetails");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Request", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Request", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1193,7 +1193,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Requests");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.RequestType", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.RequestType", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1224,7 +1224,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("RequestTypes");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Resource", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Resource", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1272,7 +1272,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Resources");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.ResourceRequest", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.ResourceRequest", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1307,7 +1307,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("ResourceRequests");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.ResourceType", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.ResourceType", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1327,7 +1327,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("ResourceTypes");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Rol", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Rol", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1352,7 +1352,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Roles");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Sale", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Sale", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1395,7 +1395,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Sales");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.SaleDetail", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.SaleDetail", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1440,7 +1440,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("SaleDetails");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Sector", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Sector", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1463,7 +1463,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Sectors");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.ServiceOrder", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.ServiceOrder", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1504,7 +1504,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("ServiceOrders");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Status", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Status", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1527,7 +1527,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Status");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Survey", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Survey", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1556,7 +1556,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Surveys");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Unit", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Unit", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -1589,7 +1589,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                     b.ToTable("Units");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Infrastructure.Identity.User", b =>
+            modelBuilder.Entity("TenHelmets.MS.Infrastructure.Identity.User", b =>
                 {
                     b.Property<string>("Id")
                         .ValueGeneratedOnAdd();
@@ -1650,7 +1650,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
-                    b.HasOne("_10Helmets.API.Infrastructure.Identity.User")
+                    b.HasOne("TenHelmets.MS.Infrastructure.Identity.User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -1658,7 +1658,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
-                    b.HasOne("_10Helmets.API.Infrastructure.Identity.User")
+                    b.HasOne("TenHelmets.MS.Infrastructure.Identity.User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -1671,7 +1671,7 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("_10Helmets.API.Infrastructure.Identity.User")
+                    b.HasOne("TenHelmets.MS.Infrastructure.Identity.User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -1679,612 +1679,612 @@ namespace _10Helmets.API.Infrastructure.Data.Migrations
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
                 {
-                    b.HasOne("_10Helmets.API.Infrastructure.Identity.User")
+                    b.HasOne("TenHelmets.MS.Infrastructure.Identity.User")
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Activity", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Activity", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.ActivityType", "ActivityType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.ActivityType", "ActivityType")
                         .WithMany()
                         .HasForeignKey("ActivityTypeId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.ActivityType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.ActivityType")
                         .WithMany("Activity")
                         .HasForeignKey("ActivityTypeId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.AlertType", "AlertType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.AlertType", "AlertType")
                         .WithMany()
                         .HasForeignKey("AlertTypeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.AlertType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.AlertType")
                         .WithMany("Activities")
                         .HasForeignKey("AlertTypeId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Employee", "Employee")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Employee", "Employee")
                         .WithMany()
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Employee")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Employee")
                         .WithMany("Activities")
                         .HasForeignKey("EmployeeId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Project")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Project")
                         .WithMany("Activities")
                         .HasForeignKey("ProjectId");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Provider", "Provider")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Provider", "Provider")
                         .WithMany()
                         .HasForeignKey("ProviderId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Provider")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Provider")
                         .WithMany("Actiities")
                         .HasForeignKey("ProviderId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Status", "Status")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Status", "Status")
                         .WithMany()
                         .HasForeignKey("StatusId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Status")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Status")
                         .WithMany("Activities")
                         .HasForeignKey("StatusId1");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Alert", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Alert", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.Activity", "Activity")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Activity", "Activity")
                         .WithMany()
                         .HasForeignKey("ActivityId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Activity")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Activity")
                         .WithMany("Alerts")
                         .HasForeignKey("ActivityId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.AlertType", "AlertType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.AlertType", "AlertType")
                         .WithMany()
                         .HasForeignKey("AlertTypeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.AlertType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.AlertType")
                         .WithMany("Alerts")
                         .HasForeignKey("AlertTypeId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.ProjectBudget", "ProjectBudget")
+                    b.HasOne("TenHelmets.MS.Core.Entities.ProjectBudget", "ProjectBudget")
                         .WithMany()
                         .HasForeignKey("ProjectBudgetId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.ProjectBudget")
+                    b.HasOne("TenHelmets.MS.Core.Entities.ProjectBudget")
                         .WithMany("Alerts")
                         .HasForeignKey("ProjectBudgetId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Request", "Request")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Request", "Request")
                         .WithMany()
                         .HasForeignKey("RequestId")
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Bill", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Bill", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.PaymentType", "PaymentType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.PaymentType", "PaymentType")
                         .WithMany()
                         .HasForeignKey("PaymentTypeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.PaymentType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.PaymentType")
                         .WithMany("Bills")
                         .HasForeignKey("PaymentTypeId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Project", "Project")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Project", "Project")
                         .WithMany()
                         .HasForeignKey("ProjectId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Project")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Project")
                         .WithMany("Bills")
                         .HasForeignKey("ProjectId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Status")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Status")
                         .WithMany("Bills")
                         .HasForeignKey("StatusId");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Cal", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Cal", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.ActionType", "ActionType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.ActionType", "ActionType")
                         .WithMany("Cals")
                         .HasForeignKey("ActionTypeId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Activity", "Activity")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Activity", "Activity")
                         .WithMany("Cals")
                         .HasForeignKey("ActivityId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Employee", "Employee")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Employee", "Employee")
                         .WithMany("Cals")
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Status", "Status")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Status", "Status")
                         .WithMany("Cals")
                         .HasForeignKey("StatusId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Customer", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Customer", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.Sector", "Sector")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Sector", "Sector")
                         .WithMany("Customers")
                         .HasForeignKey("SectorId")
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Employee", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Employee", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.DocumentType", "DocumentType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.DocumentType", "DocumentType")
                         .WithMany()
                         .HasForeignKey("DocumentTypeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.DocumentType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.DocumentType")
                         .WithMany("Employees")
                         .HasForeignKey("DocumentTypeId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Rol", "Rol")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Rol", "Rol")
                         .WithMany()
                         .HasForeignKey("RolId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Rol")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Rol")
                         .WithMany("Employees")
                         .HasForeignKey("RolId1");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Espense", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Espense", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.Employee", "Employee")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Employee", "Employee")
                         .WithMany()
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Employee")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Employee")
                         .WithMany("Espenses")
                         .HasForeignKey("EmployeeId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.EspenseType", "EspenseType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.EspenseType", "EspenseType")
                         .WithMany()
                         .HasForeignKey("EspenseTypeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.EspenseType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.EspenseType")
                         .WithMany("Espenses")
                         .HasForeignKey("EspenseTypeId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Project")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Project")
                         .WithMany("Espenses")
                         .HasForeignKey("ProjectId");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Status", "Status")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Status", "Status")
                         .WithMany()
                         .HasForeignKey("StatusId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Status")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Status")
                         .WithMany("Espenses")
                         .HasForeignKey("StatusId1");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.EventLog", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.EventLog", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.EventLogType", "EventLogType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.EventLogType", "EventLogType")
                         .WithMany()
                         .HasForeignKey("EventLogTypeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.EventLogType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.EventLogType")
                         .WithMany("EventLogs")
                         .HasForeignKey("EventLogTypeId1");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.File", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.File", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.ServiceOrder", "ServiceOrder")
+                    b.HasOne("TenHelmets.MS.Core.Entities.ServiceOrder", "ServiceOrder")
                         .WithMany()
                         .HasForeignKey("ServiceOrderId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.ServiceOrder")
+                    b.HasOne("TenHelmets.MS.Core.Entities.ServiceOrder")
                         .WithMany("Files")
                         .HasForeignKey("ServiceOrderId1");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Inspection", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Inspection", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.Activity", "Activity")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Activity", "Activity")
                         .WithMany()
                         .HasForeignKey("ActivityId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Activity")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Activity")
                         .WithMany("Inspections")
                         .HasForeignKey("ActivityId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.InspectionType", "InspectionType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.InspectionType", "InspectionType")
                         .WithMany()
                         .HasForeignKey("InspectionTypeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.InspectionType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.InspectionType")
                         .WithMany("Inspections")
                         .HasForeignKey("InspectionTypeId1");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Model", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Model", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.Resource", "Resource")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Resource", "Resource")
                         .WithMany()
                         .HasForeignKey("ResourceId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Resource")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Resource")
                         .WithMany("Models")
                         .HasForeignKey("ResourceId1");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Note", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Note", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.Activity", "Activity")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Activity", "Activity")
                         .WithMany()
                         .HasForeignKey("ActivityId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Activity")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Activity")
                         .WithMany("Notes")
                         .HasForeignKey("ActivityId1");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Priority", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Priority", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.AlertType", "AlertType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.AlertType", "AlertType")
                         .WithMany()
                         .HasForeignKey("AlertTypeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.AlertType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.AlertType")
                         .WithMany("Priorities")
                         .HasForeignKey("AlertTypeId1");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Project", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Project", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.ServiceOrder", "ServiceOrder")
+                    b.HasOne("TenHelmets.MS.Core.Entities.ServiceOrder", "ServiceOrder")
                         .WithMany()
                         .HasForeignKey("ServiceOrderId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.ServiceOrder")
+                    b.HasOne("TenHelmets.MS.Core.Entities.ServiceOrder")
                         .WithMany("Projects")
                         .HasForeignKey("ServiceOrderId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Status", "Status")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Status", "Status")
                         .WithMany()
                         .HasForeignKey("StatusId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Status")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Status")
                         .WithMany("Projects")
                         .HasForeignKey("StatusId1");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.ProjectBudget", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.ProjectBudget", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.Employee", "Employee")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Employee", "Employee")
                         .WithMany()
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Employee")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Employee")
                         .WithMany("ProjectBudgets")
                         .HasForeignKey("EmployeeId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Project", "Project")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Project", "Project")
                         .WithMany()
                         .HasForeignKey("ProjectId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Project")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Project")
                         .WithMany("ProjectBudgets")
                         .HasForeignKey("ProjectId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Unit", "Unit")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Unit", "Unit")
                         .WithMany()
                         .HasForeignKey("UnitId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Unit")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Unit")
                         .WithMany("ProjectBudgets")
                         .HasForeignKey("UnitId1");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Provider", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Provider", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.Sector", "Sector")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Sector", "Sector")
                         .WithMany()
                         .HasForeignKey("SectorId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Sector")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Sector")
                         .WithMany("Providers")
                         .HasForeignKey("SectorId1");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Purchase", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Purchase", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.Employee", "Employee")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Employee", "Employee")
                         .WithMany()
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Employee")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Employee")
                         .WithMany("Purchases")
                         .HasForeignKey("EmployeeId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.PaymentType", "PaymentType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.PaymentType", "PaymentType")
                         .WithMany()
                         .HasForeignKey("PaymentTypeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.PaymentType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.PaymentType")
                         .WithMany("Purchases")
                         .HasForeignKey("PaymentTypeId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Provider", "Provider")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Provider", "Provider")
                         .WithMany()
                         .HasForeignKey("ProviderId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Provider")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Provider")
                         .WithMany("Purchases")
                         .HasForeignKey("ProviderId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Request", "Request")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Request", "Request")
                         .WithMany()
                         .HasForeignKey("RequestId")
                         .OnDelete(DeleteBehavior.Restrict);
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.PurchaseDetail", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.PurchaseDetail", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.Purchase", "Purchase")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Purchase", "Purchase")
                         .WithMany()
                         .HasForeignKey("PurchaseId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Purchase")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Purchase")
                         .WithMany("PurchaseDetails")
                         .HasForeignKey("PurchaseId1");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Request", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Request", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.Employee", "Employee")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Employee", "Employee")
                         .WithMany()
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Employee")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Employee")
                         .WithMany("Requests")
                         .HasForeignKey("EmployeeId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Priority", "Priority")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Priority", "Priority")
                         .WithMany()
                         .HasForeignKey("PriorityId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Priority")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Priority")
                         .WithMany("Requests")
                         .HasForeignKey("PriorityId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Project", "Project")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Project", "Project")
                         .WithMany()
                         .HasForeignKey("ProjectId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Project")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Project")
                         .WithMany("Requests")
                         .HasForeignKey("ProjectId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.RequestType", "RequestType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.RequestType", "RequestType")
                         .WithMany()
                         .HasForeignKey("RequestTypeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.RequestType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.RequestType")
                         .WithMany("Requests")
                         .HasForeignKey("RequestTypeId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Status", "Status")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Status", "Status")
                         .WithMany()
                         .HasForeignKey("StatusId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Status")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Status")
                         .WithMany("Requests")
                         .HasForeignKey("StatusId1");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.RequestType", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.RequestType", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.Unit", "Unit")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Unit", "Unit")
                         .WithMany()
                         .HasForeignKey("UnitId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Unit")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Unit")
                         .WithMany("RequestTypes")
                         .HasForeignKey("UnitId1");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Resource", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Resource", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.Brand", "Brand")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Brand", "Brand")
                         .WithMany()
                         .HasForeignKey("BrandId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Brand")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Brand")
                         .WithMany("Resources")
                         .HasForeignKey("BrandId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.ResourceType", "ResourceType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.ResourceType", "ResourceType")
                         .WithMany()
                         .HasForeignKey("ResourceTypeId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.ResourceType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.ResourceType")
                         .WithMany("Resources")
                         .HasForeignKey("ResourceTypeId1");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.ResourceRequest", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.ResourceRequest", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.Request")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Request")
                         .WithMany("ResourceRequests")
                         .HasForeignKey("RequestId");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Request", "Request")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Request", "Request")
                         .WithMany()
                         .HasForeignKey("RequestsId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Resource", "Resource")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Resource", "Resource")
                         .WithMany()
                         .HasForeignKey("ResourceId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Resource")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Resource")
                         .WithMany("ResourceRequests")
                         .HasForeignKey("ResourceId1");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Rol", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Rol", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.Unit", "Unit")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Unit", "Unit")
                         .WithMany("Roles")
                         .HasForeignKey("UnitId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Sale", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Sale", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.Customer", "Customer")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Customer", "Customer")
                         .WithMany()
                         .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Customer")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Customer")
                         .WithMany("Sales")
                         .HasForeignKey("CustomerId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Employee", "Employee")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Employee", "Employee")
                         .WithMany()
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Employee")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Employee")
                         .WithMany("Sales")
                         .HasForeignKey("EmployeeId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.PaymentType", "PaymentType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.PaymentType", "PaymentType")
                         .WithMany()
                         .HasForeignKey("PaymentTypeId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.PaymentType")
+                    b.HasOne("TenHelmets.MS.Core.Entities.PaymentType")
                         .WithMany("Sales")
                         .HasForeignKey("PaymentTypeId1");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.SaleDetail", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.SaleDetail", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.Model", "Model")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Model", "Model")
                         .WithMany()
                         .HasForeignKey("ModelId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Model")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Model")
                         .WithMany("SaleDetails")
                         .HasForeignKey("ModelId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Resource", "Resource")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Resource", "Resource")
                         .WithMany()
                         .HasForeignKey("ResourceId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Resource")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Resource")
                         .WithMany("SaleDetails")
                         .HasForeignKey("ResourceId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Sale", "Sale")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Sale", "Sale")
                         .WithMany()
                         .HasForeignKey("SaleId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Sale")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Sale")
                         .WithMany("SaleDetails")
                         .HasForeignKey("SaleId1");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.ServiceOrder", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.ServiceOrder", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.Customer", "Customer")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Customer", "Customer")
                         .WithMany()
                         .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Customer")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Customer")
                         .WithMany("ServiceOrders")
                         .HasForeignKey("CustomerId1");
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Unit", "Unit")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Unit", "Unit")
                         .WithMany()
                         .HasForeignKey("UnitId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Unit")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Unit")
                         .WithMany("ServiceOrders")
                         .HasForeignKey("UnitId1");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Survey", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Survey", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.Customer", "Customer")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Customer", "Customer")
                         .WithMany("Surveys")
                         .HasForeignKey("CustomerId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Project")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Project")
                         .WithMany("Surveys")
                         .HasForeignKey("ProjectId");
                 });
 
-            modelBuilder.Entity("_10Helmets.API.Core.Entities.Unit", b =>
+            modelBuilder.Entity("TenHelmets.MS.Core.Entities.Unit", b =>
                 {
-                    b.HasOne("_10Helmets.API.Core.Entities.Organization", "Organization")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Organization", "Organization")
                         .WithMany()
                         .HasForeignKey("OrganizationId")
                         .OnDelete(DeleteBehavior.Restrict);
 
-                    b.HasOne("_10Helmets.API.Core.Entities.Organization")
+                    b.HasOne("TenHelmets.MS.Core.Entities.Organization")
                         .WithMany("Units")
                         .HasForeignKey("OrganizationId1");
                 });

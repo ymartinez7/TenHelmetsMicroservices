@@ -1,4 +1,4 @@
-﻿namespace _10Helmets.API.Core.Entities
+﻿namespace TenHelmets.MS.Core.Entities
 {
     using System;
     using System.Collections.Generic;

@@ -1,9 +1,9 @@
-﻿namespace _10Helmets.API.UI.CentralManagement.WebApi.Controllers
+﻿namespace TenHelmets.MS.UI.CentralManagement.WebApi.Controllers
 {
-    using _10Helmets.API.Core.DTOs;
-    using _10Helmets.API.Core.Entities;
-    using _10Helmets.API.Core.Enums;
-    using _10Helmets.API.Infrastructure.Identity;
+    using TenHelmets.MS.Core.DTOs;
+    using TenHelmets.MS.Core.Entities;
+    using TenHelmets.MS.Core.Enums;
+    using TenHelmets.MS.Infrastructure.Identity;
     using AutoMapper;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Hosting;

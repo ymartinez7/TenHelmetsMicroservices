@@ -1,4 +1,4 @@
-﻿namespace _10Helmets.API.Infrastructure.Data.Interfaces
+﻿namespace TenHelmets.MS.Infrastructure.Data.Interfaces
 {
     using System;
     using System.Collections.Generic;

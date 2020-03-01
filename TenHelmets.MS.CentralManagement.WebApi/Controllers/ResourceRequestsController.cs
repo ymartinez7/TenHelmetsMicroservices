@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace _10Helmets.API.UI.CentralManagement.WebApi.Controllers
+namespace TenHelmets.MS.UI.CentralManagement.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

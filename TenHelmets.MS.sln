@@ -5,8 +5,13 @@ VisualStudioVersion = 15.0.28307.902
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{4974115E-6F11-45B4-A09B-8B272BD3D708}"
 	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
 		.gitignore = .gitignore
+		deployment.yaml = deployment.yaml
+		docker-compose.yml = docker-compose.yml
+		pod.yaml = pod.yaml
 		Readme.md = Readme.md
+		service.yaml = service.yaml
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{DB5F14BB-309B-4FDD-9697-D3BFA76452D5}"

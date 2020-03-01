@@ -1,4 +1,4 @@
-﻿namespace _10Helmets.API.UI.HumanResources.WebApi
+﻿namespace TenHelmets.MS.UI.HumanResources.WebApi
 {
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
@@ -48,9 +48,9 @@
                     Title = "10Helmets APIs RESTful Human Resource"
                 });
 
-                var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                config.IncludeXmlComments(xmlPath);
+                //var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                //config.IncludeXmlComments(xmlPath);
             });
         }
 
