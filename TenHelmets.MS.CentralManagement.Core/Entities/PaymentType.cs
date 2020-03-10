@@ -1,15 +1,9 @@
-﻿namespace TenHelmets.MS.Core.Entities
-{
-    using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-    /// <summary>
-    /// 
-    /// </summary>
+namespace TenHelmets.MS.Core.Entities
+{
     public class PaymentType : BaseEntity
     {
-        /// <summary>
-        /// 
-        /// </summary>
         public PaymentType()
         {
             this.Bills = new HashSet<Bill>();
@@ -17,24 +11,9 @@
             this.Sales = new HashSet<Sale>();
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public string Name { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public virtual IEnumerable<Bill> Bills { get; private set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public virtual IEnumerable<Purchase> Purchases { get; private set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public virtual IEnumerable<Sale> Sales { get; private set; }
     }
 }

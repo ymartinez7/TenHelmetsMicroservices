@@ -1,35 +1,13 @@
-﻿namespace TenHelmets.MS.Core.Entities
-{
-    using System;
+﻿using System;
 
-    /// <summary>
-    /// 
-    /// </summary>
+namespace TenHelmets.MS.Core.Entities
+{
     public class Inspection : BaseEntity
     {
-        /// <summary>
-        /// 
-        /// </summary>
         public int ActivityId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public int InspectionTypeId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public DateTime Date { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public virtual Activity Activity { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public virtual InspectionType InspectionType { get; set; }
     }
 }

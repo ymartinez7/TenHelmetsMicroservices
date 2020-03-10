@@ -1,15 +1,9 @@
-﻿namespace TenHelmets.MS.Core.Entities
-{
-    using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-    /// <summary>
-    /// 
-    /// </summary>
+namespace TenHelmets.MS.Core.Entities
+{
     public class Employee : BaseEntity
     {
-        /// <summary>
-        /// 
-        /// </summary>
         public Employee()
         {
             this.Espenses = new HashSet<Espense>();
@@ -21,94 +15,23 @@
             this.Activities = new HashSet<Activity>();
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public string FirstName { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public string MiddleName { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public string FirstSureName { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public string SecondSureName { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public int DocumentTypeId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public string Document { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public int RolId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public string PhoneNumber { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public string Email { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public virtual DocumentType DocumentType { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public virtual Rol Rol { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public virtual IEnumerable<Espense> Espenses { get; private set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public virtual IEnumerable<Purchase> Purchases { get; private set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public virtual IEnumerable<Sale> Sales { get; private set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public virtual IEnumerable<Cal> Cals { get; private set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public virtual IEnumerable<ProjectBudget> ProjectBudgets { get; private set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public virtual IEnumerable<Request> Requests { get; private set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public virtual IEnumerable<Activity> Activities { get; private set; }
     }
 }
