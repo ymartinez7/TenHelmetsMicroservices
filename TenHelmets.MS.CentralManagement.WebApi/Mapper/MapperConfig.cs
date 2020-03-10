@@ -1,15 +1,9 @@
-﻿namespace TenHelmets.MS.UI.CentralManagement.WebApi.Mapper
-{
-    using AutoMapper;
+﻿using AutoMapper;
 
-    /// <summary>
-    /// 
-    /// </summary>
+namespace TenHelmets.MS.UI.CentralManagement.WebApi.Mapper
+{
     public sealed class MapperConfig : Profile
     {
-        /// <summary>
-        /// 
-        /// </summary>
         public MapperConfig()
         {
 

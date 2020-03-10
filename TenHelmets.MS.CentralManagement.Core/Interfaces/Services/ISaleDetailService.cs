@@ -1,10 +1,7 @@
-﻿namespace TenHelmets.MS.Core.Interfaces.Services
-{
-    using TenHelmets.MS.Core.Entities;
+﻿using TenHelmets.MS.Core.Entities;
 
-    /// <summary>
-    /// 
-    /// </summary>
+namespace TenHelmets.MS.Core.Interfaces.Services
+{
     public interface ISaleDetailService : IBaseService<SaleDetail>
     {
     }

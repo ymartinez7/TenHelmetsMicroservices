@@ -1,18 +1,11 @@
-﻿namespace TenHelmets.MS.Core.Services
-{
-    using TenHelmets.MS.Core.Entities;
-    using TenHelmets.MS.Core.Interfaces.Repositories;
-    using TenHelmets.MS.Core.Interfaces.Services;
+﻿using TenHelmets.MS.Core.Entities;
+using TenHelmets.MS.Core.Interfaces.Repositories;
+using TenHelmets.MS.Core.Interfaces.Services;
 
-    /// <summary>
-    /// 
-    /// </summary>
+namespace TenHelmets.MS.Core.Services
+{
     public sealed class CustomerService : BaseService<Customer>, ICustomerService
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="customerRepository"></param>
         public CustomerService(ICustomerRepository customerRepository)
             : base(customerRepository)
         {

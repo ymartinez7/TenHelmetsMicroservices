@@ -1,18 +1,10 @@
-﻿namespace TenHelmets.MS.Infrastructure.Data.Factories
-{
-    using TenHelmets.MS.Infrastructure.Data.Enums;
-    using TenHelmets.MS.Infrastructure.Data.Interfaces;
+﻿using TenHelmets.MS.Infrastructure.Data.Enums;
+using TenHelmets.MS.Infrastructure.Data.Interfaces;
 
-    /// <summary>
-    /// 
-    /// </summary>
+namespace TenHelmets.MS.Infrastructure.Data.Factories
+{
     public static class DocumentConnectionFactory
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="tipoDocumento"></param>
-        /// <returns></returns>
         public static IDocumentConnection GetDocumentConnection(DocumentTypeConnection documentTypeConnection)
         {
             IDocumentConnection _conexionDocumento = null;

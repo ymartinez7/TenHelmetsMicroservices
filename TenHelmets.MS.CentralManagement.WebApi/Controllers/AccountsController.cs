@@ -1,51 +1,31 @@
-﻿namespace TenHelmets.MS.UI.CentralManagement.WebApi.Controllers
-{
-    using TenHelmets.MS.Core.DTOs;
-    using TenHelmets.MS.Core.Entities;
-    using TenHelmets.MS.Core.Enums;
-    using TenHelmets.MS.Infrastructure.Identity;
-    using AutoMapper;
-    using Microsoft.AspNetCore.Authorization;
-    using Microsoft.AspNetCore.Hosting;
-    using Microsoft.AspNetCore.Identity;
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.Extensions.Configuration;
-    using Microsoft.IdentityModel.Tokens;
-    using System;
-    using System.IdentityModel.Tokens.Jwt;
-    using System.Net.Mime;
-    using System.Security.Claims;
-    using System.Text;
-    using System.Threading.Tasks;
+﻿using TenHelmets.MS.Core.DTOs;
+using TenHelmets.MS.Core.Entities;
+using TenHelmets.MS.Core.Enums;
+using TenHelmets.MS.Infrastructure.Identity;
+using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
+using System;
+using System.IdentityModel.Tokens.Jwt;
+using System.Net.Mime;
+using System.Security.Claims;
+using System.Text;
+using System.Threading.Tasks;
 
-    /// <summary>
-    /// 
-    /// </summary>
+namespace TenHelmets.MS.UI.CentralManagement.WebApi.Controllers
+{
     [Route("[controller]")]
     [Produces(MediaTypeNames.Application.Json)]
     public sealed class AccountsController : BaseController
     {
-        #region Fields
-        /// <summary>
-        /// 
-        /// </summary>
         private readonly UserManager<User> _userManager;
 
-        /// <summary>
-        /// 
-        /// </summary>
         private readonly SignInManager<User> _signInManager;
-        #endregion
 
-        #region Constructor
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="configuration"></param>
-        /// <param name="mapper"></param>
-        /// <param name="environment"></param>
-        /// <param name="userManager"></param>
-        /// <param name="signInManager"></param>
         public AccountsController(IConfiguration configuration,
             IMapper mapper,
             IHostingEnvironment environment,
@@ -58,14 +38,7 @@
             this._userManager = userManager;
             this._signInManager = signInManager;
         }
-        #endregion
 
-        #region Methods
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="model"></param>
-        /// <returns></returns>
         [HttpPost]
         [Route("Create")]
         [AllowAnonymous]
@@ -106,11 +79,6 @@
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="model"></param>
-        /// <returns></returns>
         [HttpPost]
         [Route("Login")]
         [ProducesResponseType(200)]
@@ -151,11 +119,6 @@
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="model"></param>
-        /// <returns></returns>
         private ActionResult BuildToken(UserInfo model)
         {
             var claims = new[] 
@@ -184,6 +147,5 @@
 
             return Ok(new JwtSecurityTokenHandler().WriteToken(token));
         }
-        #endregion
     }
 }

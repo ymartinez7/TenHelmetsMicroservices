@@ -1,42 +1,26 @@
-﻿namespace TenHelmets.MS.UI.CentralManagement.WebApi.Controllers
-{
-    using TenHelmets.MS.Core.DTOs;
-    using TenHelmets.MS.Core.Entities;
-    using TenHelmets.MS.Core.Enums;
-    using TenHelmets.MS.Core.Interfaces.Services;
-    using AutoMapper;
-    using Microsoft.AspNetCore.Authorization;
-    using Microsoft.AspNetCore.Hosting;
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.Extensions.Configuration;
-    using System;
-    using System.Collections.Generic;
-    using System.Net.Mime;
-    using System.Threading.Tasks;
+﻿using TenHelmets.MS.Core.DTOs;
+using TenHelmets.MS.Core.Entities;
+using TenHelmets.MS.Core.Enums;
+using TenHelmets.MS.Core.Interfaces.Services;
+using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using System;
+using System.Collections.Generic;
+using System.Net.Mime;
+using System.Threading.Tasks;
 
-    /// <summary>
-    /// 
-    /// </summary>
+namespace TenHelmets.MS.UI.CentralManagement.WebApi.Controllers
+{
     [Route("[controller]")]
     [Produces(MediaTypeNames.Application.Json)]
     [AllowAnonymous]
     public sealed class OrganizationsController : BaseController
     {
-        #region Fields
-        /// <summary>
-        /// 
-        /// </summary>
         private readonly IOrganizationService _organizationService;
-        #endregion
 
-        #region Constructor
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="configuration"></param>
-        /// <param name="mapper"></param>
-        /// <param name="environment"></param>
-        /// <param name="organizationService"></param>
         public OrganizationsController(IConfiguration configuration,
             IMapper mapper,
             IHostingEnvironment environment,
@@ -47,13 +31,7 @@
         {
             this._organizationService = organizationService;
         }
-        #endregion
 
-        #region Methods
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <returns></returns>
         [HttpGet]
         [ProducesResponseType(200)]
         [ProducesResponseType(500)]
@@ -87,11 +65,6 @@
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="organizationId"></param>
-        /// <returns></returns>
         [HttpGet("{organizationId}")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
@@ -125,11 +98,6 @@
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="model"></param>
-        /// <returns></returns>
         [HttpPost]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
@@ -169,12 +137,6 @@
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="organizationId"></param>
-        /// <param name="model"></param>
-        /// <returns></returns>
         [HttpPut("{organizationId}")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
@@ -215,11 +177,6 @@
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="organizationId"></param>
-        /// <returns></returns>
         [HttpDelete("{organizationId}")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
@@ -254,6 +211,5 @@
                     null));
             }
         }
-        #endregion
     }
 }

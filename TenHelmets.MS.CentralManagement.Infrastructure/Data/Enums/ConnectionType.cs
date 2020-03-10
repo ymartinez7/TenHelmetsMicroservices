@@ -1,23 +1,9 @@
 ﻿namespace TenHelmets.MS.Infrastructure.Data.Enums
 {
-    /// <summary>
-    /// 
-    /// </summary>
     public enum ConnectionType : int
     {
-        /// <summary>
-        /// Coresponde a una conexión de base de datos
-        /// </summary>
-        DBBBBB = 1,
-
-        /// <summary>
-        /// Corresponde a una conexión a un documento
-        /// </summary>
+        DB = 1,
         Document,
-
-        /// <summary>
-        /// Corresponde a una conexión a un servicio
-        /// </summary>
         Service,
     }
 }

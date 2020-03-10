@@ -1,7 +1,7 @@
-﻿namespace TenHelmets.MS.Core.Interfaces.Repositories
-{
-    using Entities;
+﻿using TenHelmets.MS.Core.Entities;
 
+namespace TenHelmets.MS.Core.Interfaces.Repositories
+{
     public interface IResourceTypeRepository : IBaseRepository<ResourceType>
     {
     }

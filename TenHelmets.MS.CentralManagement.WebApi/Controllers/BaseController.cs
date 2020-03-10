@@ -1,46 +1,22 @@
-﻿namespace TenHelmets.MS.UI.CentralManagement.WebApi.Controllers
-{
-    using TenHelmets.MS.Core.Enums;
-    using AutoMapper;
-    using Microsoft.AspNetCore.Authentication.JwtBearer;
-    using Microsoft.AspNetCore.Authorization;
-    using Microsoft.AspNetCore.Hosting;
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.Extensions.Configuration;
-    using System;
+﻿using TenHelmets.MS.Core.Enums;
+using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using System;
 
-    /// <summary>
-    /// 
-    /// </summary>
+namespace TenHelmets.MS.UI.CentralManagement.WebApi.Controllers
+{
     [ApiController]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class BaseController : ControllerBase
     {
-        #region Fields
-        /// <summary>
-        /// Mapea las entidades a viemodels
-        /// </summary>
         protected readonly IMapper _mapper;
-
-        /// <summary>
-        /// Contiene las variables 
-        /// de configuración de la aplicación
-        /// </summary>
         protected readonly IConfiguration _configuration;
-
-        /// <summary>
-        /// 
-        /// </summary>
         protected readonly IHostingEnvironment _environment;
-        #endregion
 
-        #region Constructor
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="configuration"></param>
-        /// <param name="mapper"></param>
-        /// <param name="environment"></param>
         public BaseController(IConfiguration configuration,
             IMapper mapper,
             IHostingEnvironment environment)
@@ -49,24 +25,12 @@
             this._environment = environment;
             this._configuration = configuration;
         }
-        #endregion
 
-        #region Methods
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="valueName"></param>
-        /// <returns></returns>
         protected string GetConfigurationValue(string valueName)
         {
             return this._configuration.GetSection("AppSettings").GetSection(valueName).Value;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="messageCode"></param>
-        /// <returns></returns>
         protected string GetMessage(int messageCode)
         {
             switch (messageCode)
@@ -84,12 +48,6 @@
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="source"></param>
-        /// <param name="description"></param>
-        /// <param name="date"></param>
         protected void HandleException(string source,
             string description,
             string date)
@@ -99,6 +57,5 @@
             //    "0",
             //    this._configuracion.GetConnectionString("ISVConnectionString"));
         }
-        #endregion
     }
 }

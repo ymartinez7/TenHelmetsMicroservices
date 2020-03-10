@@ -1,40 +1,24 @@
-﻿namespace TenHelmets.MS.UI.CentralManagement.WebApi.Controllers
-{
-    using TenHelmets.MS.Core.DTOs;
-    using TenHelmets.MS.Core.Entities;
-    using TenHelmets.MS.Core.Enums;
-    using TenHelmets.MS.Core.Interfaces.Services;
-    using AutoMapper;
-    using Microsoft.AspNetCore.Hosting;
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.Extensions.Configuration;
-    using System;
-    using System.Linq.Expressions;
-    using System.Net.Mime;
-    using System.Threading.Tasks;
+﻿using TenHelmets.MS.Core.DTOs;
+using TenHelmets.MS.Core.Entities;
+using TenHelmets.MS.Core.Enums;
+using TenHelmets.MS.Core.Interfaces.Services;
+using AutoMapper;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using System;
+using System.Linq.Expressions;
+using System.Net.Mime;
+using System.Threading.Tasks;
 
-    /// <summary>
-    /// 
-    /// </summary>
+namespace TenHelmets.MS.UI.CentralManagement.WebApi.Controllers
+{
     [Route("Organizations/{organizationId}/[controller]")]
     [Produces(MediaTypeNames.Application.Json)]
     public sealed class UnitsController : BaseController
     {
-        #region Fields
-        /// <summary>
-        /// 
-        /// </summary>
         private readonly IUnitService _unitService;
-        #endregion
 
-        #region Constructor
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="configuration"></param>
-        /// <param name="mapper"></param>
-        /// <param name="environment"></param>
-        /// <param name="unitService"></param>
         public UnitsController(IConfiguration configuration,
             IMapper mapper,
             IHostingEnvironment environment,
@@ -45,14 +29,7 @@
         {
             this._unitService = unitService;
         }
-        #endregion
 
-        #region Methods
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="organizationId"></param>
-        /// <returns></returns>
         [HttpGet]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
@@ -87,11 +64,6 @@
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="unitId"></param>
-        /// <returns></returns>
         [HttpGet("{unitId}", Name = "GetUnitById")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
@@ -125,12 +97,6 @@
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="unitId"></param>
-        /// <param name="model"></param>
-        /// <returns></returns>
         [HttpPost]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
@@ -172,12 +138,6 @@
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="unitId"></param>
-        /// <param name="model"></param>
-        /// <returns></returns>
         [HttpPut("{unitId}")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
@@ -218,11 +178,6 @@
             }
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="unitId"></param>
-        /// <returns></returns>
         [HttpDelete("{unitId}")]
         [ProducesResponseType(200)]
         [ProducesResponseType(400)]
@@ -257,6 +212,5 @@
                     null));
             }
         }
-        #endregion
     }
 }

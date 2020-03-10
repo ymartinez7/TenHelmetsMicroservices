@@ -1,13 +1,10 @@
-﻿namespace TenHelmets.MS.Infrastructure.Identity
-{
-    using Microsoft.AspNetCore.Identity;
-    using System;
-    using System.Collections.Generic;
-    using System.Text;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
+using System.Collections.Generic;
+using System.Text;
 
-    /// <summary>
-    /// 
-    /// </summary>
+namespace TenHelmets.MS.Infrastructure.Identity
+{
     public class User : IdentityUser
     {
     }

@@ -1,62 +1,34 @@
-﻿namespace TenHelmets.MS.Operations.WebApi
-{
-    using TenHelmets.MS.Core.Interfaces.Repositories;
-    using TenHelmets.MS.Core.Interfaces.Services;
-    using TenHelmets.MS.Core.Services;
-    using TenHelmets.MS.Infrastructure.Data.Context;
-    using TenHelmets.MS.Infrastructure.Data.Repositories;
-    using TenHelmets.MS.Infrastructure.Identity;
-    using TenHelmets.MS.Operations.WebApi.Mapper;
-    using AutoMapper;
-    using Microsoft.AspNetCore.Authentication.JwtBearer;
-    using Microsoft.AspNetCore.Builder;
-    using Microsoft.AspNetCore.Hosting;
-    using Microsoft.AspNetCore.Identity;
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.EntityFrameworkCore;
-    using Microsoft.Extensions.Configuration;
-    using Microsoft.Extensions.DependencyInjection;
-    using System;
-    using System.IO;
-    using System.Reflection;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using TenHelmets.MS.Operations.WebApi.Mapper;
 
-    /// <summary>
-    /// 
-    /// </summary>
+namespace TenHelmets.MS.Operations.WebApi
+{
     public class Startup
     {
-        #region Properties
-        /// <summary>
-        /// 
-        /// </summary>
-        public IConfiguration Configuration { get; }
-        #endregion
+         public IConfiguration Configuration { get; }
 
-        #region Constructor
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="configuration"></param>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
-        #endregion
 
-        #region Methods
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
-            // EF
-            services.AddDbContextPool<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("10HelmetsConnectionString")));
+            //// EF
+            //services.AddDbContextPool<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("10HelmetsConnectionString")));
 
-            // Identity
-            services.AddIdentity<User, IdentityRole>()
-                .AddEntityFrameworkStores<ApplicationDbContext>()
-                .AddDefaultTokenProviders();
+            //// Identity
+            //services.AddIdentity<User, IdentityRole>()
+            //    .AddEntityFrameworkStores<ApplicationDbContext>()
+            //    .AddDefaultTokenProviders();
 
             // Authentication
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -70,23 +42,23 @@
             IMapper mapeador = configuracionMapeo.CreateMapper();
             services.AddSingleton(mapeador);
 
-            // Service injection
-            services.AddTransient(typeof(IBaseService<>), typeof(BaseService<>));
-            services.AddTransient<IActivityService, ActivityService>();
-            services.AddTransient<IActivityTypeService, ActivityTypeService>();
-            services.AddTransient<INoteService, NoteService>();
-            services.AddTransient<IProjectBudgetService, ProjectBudgetService>();
-            services.AddTransient<IProjectService, ProjectService>();
-            services.AddTransient<IServiceOrderService, ServiceOrderService>();
+            //// Service injection
+            //services.AddTransient(typeof(IBaseService<>), typeof(BaseService<>));
+            //services.AddTransient<IActivityService, ActivityService>();
+            //services.AddTransient<IActivityTypeService, ActivityTypeService>();
+            //services.AddTransient<INoteService, NoteService>();
+            //services.AddTransient<IProjectBudgetService, ProjectBudgetService>();
+            //services.AddTransient<IProjectService, ProjectService>();
+            //services.AddTransient<IServiceOrderService, ServiceOrderService>();
 
-            // Repositories injection
-            services.AddTransient(typeof(IBaseRepository<>), typeof(BaseRepository<>));
-            services.AddTransient<IActivityRepository, ActivityRepository>();
-            services.AddTransient<IActivityTypeRepository, ActivityTypeRepository>();
-            services.AddTransient<INoteRepository, NoteRepository>();
-            services.AddTransient<IProjectBudgetRepository, ProjectBudgetRepository>();
-            services.AddTransient<IProjectRepository, ProjectRepository>();
-            services.AddTransient<IServiceOrderRepository, ServiceOrderRepoitory>();
+            //// Repositories injection
+            //services.AddTransient(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+            //services.AddTransient<IActivityRepository, ActivityRepository>();
+            //services.AddTransient<IActivityTypeRepository, ActivityTypeRepository>();
+            //services.AddTransient<INoteRepository, NoteRepository>();
+            //services.AddTransient<IProjectBudgetRepository, ProjectBudgetRepository>();
+            //services.AddTransient<IProjectRepository, ProjectRepository>();
+            //services.AddTransient<IServiceOrderRepository, ServiceOrderRepoitory>();
 
             // Enable MVC
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
@@ -99,17 +71,12 @@
                     Title = "10Helmets APIs RESTful Operations"
                 });
 
-                //var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                //config.IncludeXmlComments(xmlPath);
-            });
+                    //var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                    //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                    //config.IncludeXmlComments(xmlPath);
+                });
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="app"></param>
-        /// <param name="env"></param>
         public void Configure(IApplicationBuilder app,
             IHostingEnvironment env)
         {
@@ -136,6 +103,5 @@
             app.UseAuthentication();
             app.UseMvc();
         }
-        #endregion
     }
 }

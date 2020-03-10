@@ -1,18 +1,10 @@
-﻿namespace TenHelmets.MS.Infrastructure.Data.Factories
-{
-    using TenHelmets.MS.Infrastructure.Data.Enums;
-    using TenHelmets.MS.Infrastructure.Data.Interfaces;
+﻿using TenHelmets.MS.Infrastructure.Data.Enums;
+using TenHelmets.MS.Infrastructure.Data.Interfaces;
 
-    /// <summary>
-    /// 
-    /// </summary>
+namespace TenHelmets.MS.Infrastructure.Data.Factories
+{
     public static class ServiceConnectionFactory
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="serviceTypeConnection"></param>
-        /// <returns></returns>
         public static IServiceConnection GetServiceConnection(ServiceTypeConnection serviceTypeConnection)
         {
             IServiceConnection _serviceConnection = null;

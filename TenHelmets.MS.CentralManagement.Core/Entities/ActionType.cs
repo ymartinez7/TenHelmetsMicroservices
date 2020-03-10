@@ -1,28 +1,15 @@
-﻿namespace TenHelmets.MS.Core.Entities
-{
-    using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-    /// <summary>
-    /// 
-    /// </summary>
+namespace TenHelmets.MS.Core.Entities
+{
     public class ActionType : BaseEntity
     {
-        /// <summary>
-        /// 
-        /// </summary>
         public ActionType()
         {
-            this.Cals = new HashSet<Cal>();
+            Cals = new HashSet<Cal>();
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public string Name { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public virtual IEnumerable<Cal> Cals { get; private set; }
     }
 }

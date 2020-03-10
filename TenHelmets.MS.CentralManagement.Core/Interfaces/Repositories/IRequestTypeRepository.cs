@@ -1,10 +1,7 @@
-﻿namespace TenHelmets.MS.Core.Interfaces.Repositories
-{
-    using Entities;
+﻿using TenHelmets.MS.Core.Entities;
 
-    /// <summary>
-    /// 
-    /// </summary>
+namespace TenHelmets.MS.Core.Interfaces.Repositories
+{
     public interface IRequestTypeRepository : IBaseRepository<RequestType>
     {
     }

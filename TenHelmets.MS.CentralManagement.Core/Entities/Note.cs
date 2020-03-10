@@ -1,23 +1,9 @@
 ﻿namespace TenHelmets.MS.Core.Entities
 {
-    /// <summary>
-    /// 
-    /// </summary>
     public class Note : BaseEntity
     {
-        /// <summary>
-        /// 
-        /// </summary>
         public string Content { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public int ActivityId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public virtual Activity Activity { get; set; }
     }
 }

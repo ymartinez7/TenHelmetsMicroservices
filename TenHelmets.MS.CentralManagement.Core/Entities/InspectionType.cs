@@ -1,33 +1,16 @@
-﻿namespace TenHelmets.MS.Core.Entities
-{
-    using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
-    /// <summary>
-    /// 
-    /// </summary>
+namespace TenHelmets.MS.Core.Entities
+{
     public class InspectionType : BaseEntity
     {
-        /// <summary>
-        /// 
-        /// </summary>
         public InspectionType()
         {
             this.Inspections = new HashSet<Inspection>();
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
         public string Name { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public string Description { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public virtual IEnumerable<Inspection> Inspections { get; private set; }
     }
 }

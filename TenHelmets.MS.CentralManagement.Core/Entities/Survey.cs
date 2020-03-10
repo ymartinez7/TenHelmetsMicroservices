@@ -1,38 +1,12 @@
 ﻿namespace TenHelmets.MS.Core.Entities
 {
-    /// <summary>
-    /// 
-    /// </summary>
     public class Survey : BaseEntity
     {
-        /// <summary>
-        /// 
-        /// </summary>
         public int CustomerId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         //public int ProjectId { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public float Score { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public string Qualification { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public virtual Customer Customer { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         //public virtual Project Project { get; set; }
     }
 }

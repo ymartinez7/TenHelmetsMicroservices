@@ -1,18 +1,11 @@
-﻿namespace TenHelmets.MS.Core.Services
-{
-    using TenHelmets.MS.Core.Entities;
-    using TenHelmets.MS.Core.Interfaces.Repositories;
-    using TenHelmets.MS.Core.Interfaces.Services;
+﻿using TenHelmets.MS.Core.Entities;
+using TenHelmets.MS.Core.Interfaces.Repositories;
+using TenHelmets.MS.Core.Interfaces.Services;
 
-    /// <summary>
-    /// 
-    /// </summary>
+namespace TenHelmets.MS.Core.Services
+{
     public class DocumentTypeService : BaseService<DocumentType>, IDocumentTypeService
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="documentTypeRepository"></param>
         public DocumentTypeService(IDocumentTypeRepository documentTypeRepository)
             : base(documentTypeRepository)
         {

@@ -1,55 +1,36 @@
-﻿namespace TenHelmets.MS.UI.CentralManagement.WebApi
-{
-    using TenHelmets.MS.Core.Interfaces.Repositories;
-    using TenHelmets.MS.Core.Interfaces.Services;
-    using TenHelmets.MS.Core.Services;
-    using TenHelmets.MS.Infrastructure.Data.Context;
-    using TenHelmets.MS.Infrastructure.Data.Repositories;
-    using TenHelmets.MS.Infrastructure.Identity;
-    using TenHelmets.MS.UI.CentralManagement.WebApi.Mapper;
-    using AutoMapper;
-    using Microsoft.AspNetCore.Authentication.JwtBearer;
-    using Microsoft.AspNetCore.Builder;
-    using Microsoft.AspNetCore.Hosting;
-    using Microsoft.AspNetCore.Identity;
-    using Microsoft.AspNetCore.Mvc;
-    using Microsoft.EntityFrameworkCore;
-    using Microsoft.Extensions.Configuration;
-    using Microsoft.Extensions.DependencyInjection;
-    using Microsoft.IdentityModel.Tokens;
-    using System;
-    using System.IO;
-    using System.Reflection;
-    using System.Text;
+﻿using TenHelmets.MS.Core.Interfaces.Repositories;
+using TenHelmets.MS.Core.Interfaces.Services;
+using TenHelmets.MS.Core.Services;
+using TenHelmets.MS.Infrastructure.Data.Context;
+using TenHelmets.MS.Infrastructure.Data.Repositories;
+using TenHelmets.MS.Infrastructure.Identity;
+using TenHelmets.MS.UI.CentralManagement.WebApi.Mapper;
+using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.IdentityModel.Tokens;
+using System;
+using System.IO;
+using System.Reflection;
+using System.Text;
 
-    /// <summary>
-    /// 
-    /// </summary>
+namespace TenHelmets.MS.UI.CentralManagement.WebApi
+{
     public class Startup
     {
-        #region Properties
-        /// <summary>
-        /// 
-        /// </summary>
         public IConfiguration Configuration { get; }
-        #endregion
 
-        #region Constructor
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="configuration"></param>
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
-        #endregion
 
-        #region Methods
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="services"></param>
         public void ConfigureServices(IServiceCollection services)
         {
             // EF
@@ -91,7 +72,7 @@
             services.AddTransient<IBrandService, BrandService>();
             services.AddTransient<ICustomerService, CustomerService>();
             services.AddTransient<IEventLogService, EventLogService>();
-            services.AddTransient<IFileService, FileService>();
+            //services.AddTransient<IFileService, FileService>();
             services.AddTransient<IModelService, ModelService>();
             services.AddTransient<IOrganizationService, OrganizationService>();
             services.AddTransient<IPriorityService, PriorityService>();
@@ -111,7 +92,7 @@
             services.AddTransient<IBrandRepository, BrandRepository>();
             services.AddTransient<ICustomerRepository, CustomerRepository>();
             services.AddTransient<IEventLogRepository, EventLogRepository>();
-            services.AddTransient<IFileRepository, FileRepository>();
+            //services.AddTransient<IFileRepository, FileRepository>();
             services.AddTransient<IModelRepository, ModelRepository>();
             services.AddTransient<IOrganizationRepository, OrganizationRepository>();
             services.AddTransient<IPriorityRepository, PriorityRepository>();
@@ -140,11 +121,6 @@
             });
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="app"></param>
-        /// <param name="env"></param>
         public void Configure(IApplicationBuilder app,
             IHostingEnvironment env)
         {
@@ -171,6 +147,5 @@
             app.UseAuthentication();
             app.UseMvc();
         }
-        #endregion
     }
 }
