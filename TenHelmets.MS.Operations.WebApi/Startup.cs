@@ -7,13 +7,14 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.OpenApi.Models;
 using TenHelmets.MS.Operations.WebApi.Mapper;
 
 namespace TenHelmets.MS.Operations.WebApi
 {
     public class Startup
     {
-         public IConfiguration Configuration { get; }
+        public IConfiguration Configuration { get; }
 
         public Startup(IConfiguration configuration)
         {
@@ -66,15 +67,17 @@ namespace TenHelmets.MS.Operations.WebApi
             // Enable swagger
             services.AddSwaggerGen(config =>
             {
-                config.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info()
-                {
-                    Title = "10Helmets APIs RESTful Operations"
-                });
+                //config.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info()
+                //{
+                //    Title = "10Helmets APIs RESTful Operations"
+                //});
 
-                    //var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
-                    //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
-                    //config.IncludeXmlComments(xmlPath);
-                });
+                config.SwaggerDoc("v1", new OpenApiInfo { Title = "10Helmets APIs RESTful Operations", Version = "v1" });
+
+                //var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                //config.IncludeXmlComments(xmlPath);
+            });
         }
 
         public void Configure(IApplicationBuilder app,

@@ -1,0 +1,43 @@
+version: '3.4'
+
+services:
+  tenhelmets.ms.administration.webapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "8010:80"
+
+  tenhelmets.ms.centralmanagement.webapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "8011:80"
+
+
+  tenhelmets.ms.construction.webapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "8012:80"
+
+
+  tenhelmets.ms.direction.webapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "8013:80"
+
+
+  tenhelmets.ms.humanresources.webapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "8014:80"
+
+
+  tenhelmets.ms.c.webapi:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "8015:80"
+

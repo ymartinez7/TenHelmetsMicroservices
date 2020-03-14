@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.OpenApi.Models;
 using System;
 using System.IO;
 using System.Reflection;
@@ -24,15 +25,26 @@ namespace TenHelmets.MS.UI.Administration.WebApi
 
             services.AddSwaggerGen(config =>
             {
-                config.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info()
-                {
-                    Title = "10Helmets APIs RESTful Administration"
-                });
+                //config.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info()
+                //{
+                //    Title = "10Helmets APIs RESTful Administration"
+                //});
+
+                config.SwaggerDoc("v1", new OpenApiInfo { Title = "10Helmets APIs RESTful Administration", Version = "v1" });
 
                 //var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 //config.IncludeXmlComments(xmlPath);
             });
+
+
+
+            services.AddAuthentication("Bearer")
+                .AddJwtBearer("Bearer", config =>
+                {
+                    config.MetadataAddress = "http://localhost:65176";
+                    config.Audience = "ApiOne";
+                });
         }
 
         public void Configure(IApplicationBuilder app,
@@ -55,6 +67,8 @@ namespace TenHelmets.MS.UI.Administration.WebApi
             {
                 config.SwaggerEndpoint("../swagger/v1/swagger.json", "Backend API Administration");
             });
+
+            //app.UseAuthentication();
 
             app.UseMvc();
         }

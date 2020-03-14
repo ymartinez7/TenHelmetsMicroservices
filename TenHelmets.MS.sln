@@ -1,17 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.902
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{4974115E-6F11-45B4-A09B-8B272BD3D708}"
 	ProjectSection(SolutionItems) = preProject
-		.dockerignore = .dockerignore
-		.gitignore = .gitignore
-		deployment.yaml = deployment.yaml
-		docker-compose.yml = docker-compose.yml
-		pod.yaml = pod.yaml
+		deployment.yamle = deployment.yamle
+		pod.yamle = pod.yamle
 		Readme.md = Readme.md
-		service.yaml = service.yaml
+		service.yamle = service.yamle
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{DB5F14BB-309B-4FDD-9697-D3BFA76452D5}"
@@ -86,9 +83,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{C5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7AF7F0A4-0B75-4D39-A8A6-F13DA295D3E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TenHelmets.MS.Identity.webApi", "TenHelmets.MS.Identity.webApi\TenHelmets.MS.Identity.webApi.csproj", "{DA5A2614-C998-4BEA-AB49-910EE06310D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TenHelmets.MS.Identity.webApi", "TenHelmets.MS.Identity.webApi\TenHelmets.MS.Identity.webApi.csproj", "{DA5A2614-C998-4BEA-AB49-910EE06310D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TenHelmets.MS.Identity.webApi.UnitTests", "TenHelmets.MS.Identity.webApi.UnitTests\TenHelmets.MS.Identity.webApi.UnitTests.csproj", "{381122B7-FE58-4B4C-8EF3-9A51F7AC2337}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TenHelmets.MS.Identity.webApi.UnitTests", "TenHelmets.MS.Identity.webApi.UnitTests\TenHelmets.MS.Identity.webApi.UnitTests.csproj", "{381122B7-FE58-4B4C-8EF3-9A51F7AC2337}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{7F602445-B5CB-4E54-93D0-20544FFFD462}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BuildingBlocks", "BuildingBlocks", "{46E52B33-9F31-4900-A1AE-7CAA64256C70}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer", "..\IdentityServer\IdentityServer.csproj", "{A7488694-7272-4BBB-9850-9E012AC8CC97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security", "Security", "{292312A0-702A-41F1-A6EF-7EFDC79140A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -168,6 +173,14 @@ Global
 		{381122B7-FE58-4B4C-8EF3-9A51F7AC2337}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{381122B7-FE58-4B4C-8EF3-9A51F7AC2337}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{381122B7-FE58-4B4C-8EF3-9A51F7AC2337}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F602445-B5CB-4E54-93D0-20544FFFD462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F602445-B5CB-4E54-93D0-20544FFFD462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F602445-B5CB-4E54-93D0-20544FFFD462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F602445-B5CB-4E54-93D0-20544FFFD462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A7488694-7272-4BBB-9850-9E012AC8CC97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A7488694-7272-4BBB-9850-9E012AC8CC97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A7488694-7272-4BBB-9850-9E012AC8CC97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A7488694-7272-4BBB-9850-9E012AC8CC97}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -210,6 +223,9 @@ Global
 		{7AF7F0A4-0B75-4D39-A8A6-F13DA295D3E6} = {C5D42E3C-3F0C-4230-A34E-DAC5978748F1}
 		{DA5A2614-C998-4BEA-AB49-910EE06310D7} = {C5D42E3C-3F0C-4230-A34E-DAC5978748F1}
 		{381122B7-FE58-4B4C-8EF3-9A51F7AC2337} = {7AF7F0A4-0B75-4D39-A8A6-F13DA295D3E6}
+		{46E52B33-9F31-4900-A1AE-7CAA64256C70} = {0961C237-E948-4E35-8830-CF66445CED19}
+		{A7488694-7272-4BBB-9850-9E012AC8CC97} = {292312A0-702A-41F1-A6EF-7EFDC79140A8}
+		{292312A0-702A-41F1-A6EF-7EFDC79140A8} = {46E52B33-9F31-4900-A1AE-7CAA64256C70}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3A1629DF-0F2E-4303-99A1-1751414FDC3B}

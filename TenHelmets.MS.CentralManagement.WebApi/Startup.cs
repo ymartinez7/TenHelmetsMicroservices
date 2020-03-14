@@ -19,6 +19,7 @@ using System;
 using System.IO;
 using System.Reflection;
 using System.Text;
+using Microsoft.OpenApi.Models;
 
 namespace TenHelmets.MS.UI.CentralManagement.WebApi
 {
@@ -110,10 +111,12 @@ namespace TenHelmets.MS.UI.CentralManagement.WebApi
             // Enable swagger
             services.AddSwaggerGen(config =>
             {
-                config.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info()
-                {
-                    Title = "10Helmets APIs RESTful Central Management"
-                });
+                //config.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info()
+                //{
+                //    Title = "10Helmets APIs RESTful Central Management"
+                //});
+
+                config.SwaggerDoc("v1", new OpenApiInfo { Title = "10Helmets APIs RESTful Central Management", Version = "v1" });
 
                 //var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);

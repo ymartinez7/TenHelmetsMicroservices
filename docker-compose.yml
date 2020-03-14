@@ -1,8 +1,42 @@
-version: '2'
+version: '3.4'
+
 services:
- web:
-  build:
-   dockerfile: .\TenHelmets.MS.Administration.WebApi\dockerfile
-   context: .
-  ports:
-   - "8011:80"
+  tenhelmets.ms.administration.webapi:
+    image: ${DOCKER_REGISTRY-}tenhelmetsmsadministrationwebapi
+    build:
+      context: .
+      dockerfile: TenHelmets.MS.Administration.WebApi\Dockerfile
+
+  tenhelmets.ms.centralmanagement.webapi:
+    image: ${DOCKER_REGISTRY-}tenhelmetsmscentralmanagementwebapi
+    build:
+      context: .
+      dockerfile: TenHelmets.MS.CentralManagement.WebApi\Dockerfile
+
+
+  tenhelmets.ms.construction.webapi:
+    image: ${DOCKER_REGISTRY-}tenhelmetsmsconstructionwebapi
+    build:
+      context: .
+      dockerfile: TenHelmets.MS.Construction.WebApi\Dockerfile
+
+  tenhelmets.ms.direction.webapi:
+    image: ${DOCKER_REGISTRY-}tenhelmetsmsdirectionwebapi
+    build:
+      context: .
+      dockerfile: TenHelmets.MS.Direction.WebApi\Dockerfile
+
+
+  tenhelmets.ms.humanresources.webapi:
+    image: ${DOCKER_REGISTRY-}tenhelmetsmshumanresourceswebapi
+    build:
+      context: .
+      dockerfile: TenHelmets.MS.HumanResources.WebApi\Dockerfile
+
+
+  tenhelmets.ms.c.webapi:
+    image: ${DOCKER_REGISTRY-}tenhelmetsmscwebapi
+    build:
+      context: .
+      dockerfile: TenHelmets.MS.Operations.WebApi\Dockerfile
+

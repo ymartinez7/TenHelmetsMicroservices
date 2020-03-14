@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.OpenApi.Models;
 using System;
 using System.IO;
 using System.Reflection;
@@ -24,10 +25,12 @@ namespace TenHelmets.MS.UI.Construction.WebApi
 
             services.AddSwaggerGen(config =>
             {
-                config.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info()
-                {
-                    Title = "10Helmets APIs RESTful Construction"
-                });
+                //config.SwaggerDoc("v1", new Swashbuckle.AspNetCore.Swagger.Info()
+                //{
+                //    Title = "10Helmets APIs RESTful Construction"
+                //});
+
+                config.SwaggerDoc("v1", new OpenApiInfo { Title = "10Helmets APIs RESTful Construction", Version = "v1" });
 
                 //var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
