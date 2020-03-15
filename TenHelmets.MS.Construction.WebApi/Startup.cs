@@ -36,6 +36,15 @@ namespace TenHelmets.MS.UI.Construction.WebApi
                 //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 //config.IncludeXmlComments(xmlPath);
             });
+
+            // Authentication Identity Server 4
+            services.AddAuthentication("Bearer")
+                .AddIdentityServerAuthentication(config =>
+                {
+                    config.Authority = "https://localhost:44398";
+                    config.RequireHttpsMetadata = false;
+                    config.ApiName = "construction-api";
+                });
         }
 
         public void Configure(IApplicationBuilder app,
@@ -59,6 +68,7 @@ namespace TenHelmets.MS.UI.Construction.WebApi
                 config.SwaggerEndpoint("../swagger/v1/swagger.json", "Backend API Construction");
             });
 
+            app.UseAuthentication();
             app.UseMvc();
         }
     }

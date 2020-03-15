@@ -9,19 +9,19 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2-nanoserver-1903 AS build
 WORKDIR /src
-COPY ["TenHelmets.MS.Operations.WebApi/TenHelmets.MS.c.WebApi.csproj", "TenHelmets.MS.Operations.WebApi/"]
-RUN dotnet restore "TenHelmets.MS.Operations.WebApi/TenHelmets.MS.c.WebApi.csproj"
+COPY ["TenHelmets.MS.Operations.WebApi/TenHelmets.MS.Operations.WebApi.csproj", "TenHelmets.MS.Operations.WebApi/"]
+RUN dotnet restore "TenHelmets.MS.Operations.WebApi/TenHelmets.MS.Operations.WebApi.csproj"
 COPY . .
 WORKDIR "/src/TenHelmets.MS.Operations.WebApi"
-RUN dotnet build "TenHelmets.MS.c.WebApi.csproj" -c Release -o /app/build
+RUN dotnet build "TenHelmets.MS.Operations.WebApi.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "TenHelmets.MS.c.WebApi.csproj" -c Release -o /app/publish
+RUN dotnet publish "TenHelmets.MS.Operations.WebApi.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "TenHelmets.MS.c.WebApi.dll"]
+ENTRYPOINT ["dotnet", "TenHelmets.MS.Operations.WebApi.dll"]
 
 #FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 #WORKDIR app

@@ -43,19 +43,19 @@ namespace TenHelmets.MS.UI.CentralManagement.WebApi
                 .AddDefaultTokenProviders();
 
             // Authentication
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(options => 
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    ValidateIssuer = true,
-                    ValidateAudience = true,
-                    ValidateLifetime = true,
-                    ValidateIssuerSigningKey = true,
-                    ValidIssuer = "yourdomain.com",
-                    ValidAudience = "yourdomain.com",
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Secret_Key"])),
-                    ClockSkew = TimeSpan.Zero
-                });
+            //services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            //    .AddJwtBearer(options => 
+            //    options.TokenValidationParameters = new TokenValidationParameters
+            //    {
+            //        ValidateIssuer = true,
+            //        ValidateAudience = true,
+            //        ValidateLifetime = true,
+            //        ValidateIssuerSigningKey = true,
+            //        ValidIssuer = "yourdomain.com",
+            //        ValidAudience = "yourdomain.com",
+            //        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Secret_Key"])),
+            //        ClockSkew = TimeSpan.Zero
+            //    });
 
             // Configuraciòn del auto mapeador
             var configuracionMapeo = new MapperConfiguration(mc =>
@@ -122,6 +122,15 @@ namespace TenHelmets.MS.UI.CentralManagement.WebApi
                 //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 //config.IncludeXmlComments(xmlPath);
             });
+
+            // Authentication Identity Server 4
+            services.AddAuthentication("Bearer")
+                .AddIdentityServerAuthentication(config =>
+                {
+                    config.Authority = "https://localhost:44398";
+                    config.RequireHttpsMetadata = false;
+                    config.ApiName = "cental-managemet-api";
+                });
         }
 
         public void Configure(IApplicationBuilder app,

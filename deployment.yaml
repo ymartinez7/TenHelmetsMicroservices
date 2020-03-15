@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: ms-administration-deployment
+ labels:
+  app: ms-administration
+spec:
+ replicas: 10
+ selector:
+  matchLabels:
+   app: ms-administration
+ template:
+  metadata:
+   labels:
+    app: ms-administration
+  spec:
+   containers:
+   - name: ms-administration
+     image: tenhelmetsmsadministrationwebapi:dev
+     ports:
+     - containerPort: 8018
+
+apiVersion: v1
+kind: Service
+metadata:
+ name: ms-administration-service
+spec:
+ type: LoadBalancer
+ ports:
+ - port: 80
+ selector:
+  app: ms-administration

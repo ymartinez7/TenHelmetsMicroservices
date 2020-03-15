@@ -36,6 +36,15 @@ namespace TenHelmets.MS.UI.HumanResources.WebApi
                 //var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 //config.IncludeXmlComments(xmlPath);
             });
+
+            // Authentication Identity Server 4
+            services.AddAuthentication("Bearer")
+                .AddIdentityServerAuthentication(config =>
+                {
+                    config.Authority = "https://localhost:44398";
+                    config.RequireHttpsMetadata = false;
+                    config.ApiName = "human-resources-api";
+                });
         }
 
         public void Configure(IApplicationBuilder app,
@@ -59,6 +68,7 @@ namespace TenHelmets.MS.UI.HumanResources.WebApi
                 config.SwaggerEndpoint("../swagger/v1/swagger.json", "Backend API Human Resource");
             });
 
+            app.UseAuthentication();
             app.UseMvc();
         }
     }

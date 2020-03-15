@@ -40,3 +40,10 @@ services:
       context: .
       dockerfile: TenHelmets.MS.Operations.WebApi\Dockerfile
 
+
+  tenhelmets.ms.identityserver.web:
+    image: ${DOCKER_REGISTRY-}tenhelmetsmsidentityserverweb
+    build:
+      context: .
+      dockerfile: TenHelmets.MS.IdentityServer.web\Dockerfile
+

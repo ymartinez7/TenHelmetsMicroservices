@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ template "tenhelmetsmsidentityserverweb.fullname" . }}
+  labels:
+    app: {{ template "tenhelmetsmsidentityserverweb.name" . }}
+    chart: {{ template "tenhelmetsmsidentityserverweb.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app: {{ template "tenhelmetsmsidentityserverweb.name" . }}
+    release: {{ .Release.Name }}
